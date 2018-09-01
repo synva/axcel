@@ -1,0 +1,30 @@
+<div class="axcel-table">
+  <div class="axcel-header-wrapper" [style.height]="headerHeight ? headerHeight + 'px' : '30px'">
+    <div class="axcel-header">
+      <div class="axcel-header-frozen">
+        <div class="axcel-ruler-header">
+          <axcel-cell [isHeader]="true">table</axcel-cell>
+        </div>
+        <ng-content select="axcel-header [frozen]"></ng-content>
+      </div>
+      <div #headerScroll class="axcel-header-scroll-wrapper">
+        <div class="axcel-header-scroll">
+          <ng-content select="axcel-header"></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="axcel-body-wrapper" [style.height]="headerHeight ? 'calc(100% - ' + headerHeight + 'px)' : 'calc(100% - 30px)'">
+    <div #rulerScroll class="axcel-body-frozen">
+      <div class="axcel-ruler-header">
+        <axcel-cell *ngFor="let data of dataSources; let i = index;">{{i + 1}}</axcel-cell>
+      </div>
+      <ng-content select="axcel-column [frozen]"></ng-content>
+    </div>
+    <div #bodyScroll class="axcel-body-scroll-wrapper" (scroll)="onScroll()">
+      <div class="axcel-body-scroll">
+        <ng-content select="axcel-column"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

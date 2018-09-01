@@ -1,0 +1,12 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="over" [(opened)]="userService.sidebarOpen">menu</mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="userService.sidebarOpen = !userService.sidebarOpen"><mat-icon>menu</mat-icon></button>
+      <h1 class="example-app-name">Sample App</h1>
+    </mat-toolbar>
+    <div class="app-body">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-blue: (
+  50: #ffffff,
+  100: #dde6f3,
+  200: #b4c9e4,
+  300: #7fa3d1,
+  400: #6992c9,
+  500: #5282c1,
+  600: #4072b4,
+  700: #38649d,
+  800: #305687,
+  900: #284770,
+  A100: #ffffff,
+  A200: #dde6f3,
+  A400: #6992c9,
+  A700: #38649d,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white
+  )
+);
+
+$default-primary: mat-palette($custom-blue); // default use 500
+$default-accent: mat-palette($mat-pink);
+$default-warn: mat-palette($mat-deep-orange);
+$default-theme: mat-light-theme($default-primary, $default-accent, $default-warn);
+@include angular-material-theme($default-theme);
+
+@import url('https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css');
+
+// common
+html, body {
+  font-family: 'Rounded Mplus 1c';
+  margin: 0;
+  padding: 0;
+}
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}

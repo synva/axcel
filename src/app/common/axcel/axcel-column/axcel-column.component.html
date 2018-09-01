@@ -1,0 +1,9 @@
+<ng-container *ngTemplateOutlet="dataSources ? content : loading"></ng-container>
+
+<ng-template #content>
+  <div class="axcel-column" [style.width]="width ? width + 'px' : auto">
+    <axcel-cell *ngFor="let data of dataSources;">{{data[bind]}}</axcel-cell>
+  </div>
+</ng-template>
+
+<ng-template #loading></ng-template>

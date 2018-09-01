@@ -1,0 +1,106 @@
+
+<div *ngIf="hero$ | async as hero">
+  {{hero.col}}
+</div>
+<p>
+  {{userService?.user?.id}}
+</p>
+<p>
+  Message: {{messageService.messages.col}}
+</p>
+<p>
+  長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章長い文章
+</p>
+<button mat-raised-button color="accent" (click)="getData()">get</button>
+<button mat-raised-button color="primary" (click)="postData()">post</button>
+<button mat-raised-button color="warn" (click)="logout()">logout</button>
+<p>
+  <a routerLink="/my">my</a>
+</p>
+<div style="width: 800px; height: 400px; margin: 20px;">
+  <axcel-table [headerHeight]="40" [dataSources]="datas">
+    <axcel-header frozen>ID</axcel-header>
+    <axcel-header frozen>名前</axcel-header>
+    <axcel-header>性別</axcel-header>
+    <axcel-header>年齢</axcel-header>
+    <axcel-header>月収</axcel-header>
+    <axcel-header>ボーナス</axcel-header>
+    <axcel-header>年収</axcel-header>
+    <axcel-header>貯蓄</axcel-header>
+
+    <axcel-column frozen [bind]="'id'"></axcel-column>
+    <axcel-column frozen [bind]="'name'"></axcel-column>
+    <axcel-column [bind]="'sex'"></axcel-column>
+    <axcel-column [bind]="'age'"></axcel-column>
+    <axcel-column [bind]="'monthly'"></axcel-column>
+    <axcel-column [bind]="'bonus'"></axcel-column>
+    <axcel-column [bind]="'annual'"></axcel-column>
+    <axcel-column [bind]="'bank'"></axcel-column>
+  </axcel-table>
+</div>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
+<p>
+  文字数パッチ
+</p>
