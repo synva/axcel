@@ -11,11 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 
 // common
-// import { AxcelModule } from './common/axcel/axcel.module';
-import { AxcelTableComponent } from './common/axcel/axcel-table/axcel-table.component';
-import { AxcelHeaderComponent } from './common/axcel/axcel-header/axcel-header.component';
-import { AxcelColumnComponent } from './common/axcel/axcel-column/axcel-column.component';
-import { AxcelCellComponent } from './common/axcel/axcel-cell/axcel-cell.component';
+import { AxcelModule } from './common/axcel/axcel.module';
+// import { AxcelTableComponent } from './common/axcel/axcel-table/axcel-table.component';
+// import { AxcelHeaderComponent } from './common/axcel/axcel-header/axcel-header.component';
+// import { AxcelColumnComponent } from './common/axcel/axcel-column/axcel-column.component';
+// import { AxcelCellComponent } from './common/axcel/axcel-cell/axcel-cell.component';
 
 // components
 import { AppComponent } from './app.component';
@@ -52,23 +52,23 @@ export function init_app(messageService: MessageService) {
     LoginComponent,
     HomeComponent,
     MyComponent,
-    ErrorComponent,
-    AxcelTableComponent,
-    AxcelColumnComponent,
-    AxcelHeaderComponent,
-    AxcelCellComponent
+    ErrorComponent
+    // AxcelTableComponent,
+    // AxcelColumnComponent,
+    // AxcelHeaderComponent,
+    // AxcelCellComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule
-    // AxcelModule
+    MaterialModule,
+    AxcelModule
   ],
   exports: [
-    MaterialModule
-    // AxcelModule
+    MaterialModule,
+    AxcelModule
   ],
   providers: [
     {
